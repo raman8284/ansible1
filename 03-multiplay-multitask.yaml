@@ -1,0 +1,20 @@
+---
+- name: webserver
+  hosts: web
+  tasks:
+    - name: create file
+      file:
+        path: /home/raman/sample
+        state: directory
+    - name: download file
+      get_url:
+        url: https://www.dwsamplefiles.com/?dl_id=178
+        dest: /home/raman
+- name: app server
+  hosts: app
+  tasks:
+    - name: create file
+      file:
+        path: /home/raman/laxmi
+        state: touch
+...
