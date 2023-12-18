@@ -1,0 +1,9 @@
+---
+- name: web server
+  hosts: web
+  tasks:
+    - name: web direcory created
+      file:
+        path: /home/raman/web.txt
+        state: directory
+...
