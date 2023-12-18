@@ -1,0 +1,13 @@
+---
+- name: webserver created
+  hosts: web
+  tasks:
+    - name: file created
+      file:
+        path: /home/raman/chinna
+        state: directory
+    - name: download file
+      get_url:
+        url: https://www.dwsamplefiles.com/?dl_id=177
+        dest: /home/raman
+...
